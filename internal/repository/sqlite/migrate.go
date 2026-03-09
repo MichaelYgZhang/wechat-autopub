@@ -1,7 +1,7 @@
 package sqlite
 
 import (
-	"github.com/example/wechat-autopub/internal/domain"
+	"github.com/MichaelYgZhang/wechat-autopub/internal/domain"
 	"github.com/glebarez/sqlite"
 	"gorm.io/gorm"
 	"gorm.io/gorm/logger"

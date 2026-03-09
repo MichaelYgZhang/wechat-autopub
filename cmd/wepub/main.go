@@ -7,8 +7,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/example/wechat-autopub/internal/fetcher"
-	"github.com/example/wechat-autopub/internal/wechat"
+	"github.com/MichaelYgZhang/wechat-autopub/internal/fetcher"
+	"github.com/MichaelYgZhang/wechat-autopub/internal/wechat"
 )
 
 func main() {
@@ -25,21 +25,21 @@ func main() {
 	pollStatus := flag.Bool("poll", false, "发布后轮询状态直到完成")
 
 	flag.Usage = func() {
-		fmt.Fprintf(os.Stderr, `微信公众号发布 Demo
+		fmt.Fprintf(os.Stderr, `wepub - 微信公众号文章发布工具
 
 用法:
-  go run cmd/demo/main.go [参数]
+  go run cmd/wepub/main.go [参数]
 
 示例:
   # 从 URL 抓取文章，上传封面图，创建草稿
-  go run cmd/demo/main.go \
+  go run cmd/wepub/main.go \
     --app-id=YOUR_APP_ID \
     --app-secret=YOUR_APP_SECRET \
     --url=https://example.com/article \
     --thumb-image=cover.jpg
 
   # 创建草稿并发布
-  go run cmd/demo/main.go \
+  go run cmd/wepub/main.go \
     --app-id=YOUR_APP_ID \
     --app-secret=YOUR_APP_SECRET \
     --url=https://example.com/article \
@@ -111,7 +111,7 @@ func main() {
 	} else {
 		step("3", "使用手动提供的内容")
 		if articleTitle == "" {
-			articleTitle = "Demo Article"
+			articleTitle = "Untitled"
 		}
 	}
 

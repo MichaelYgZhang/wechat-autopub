@@ -1,4 +1,4 @@
-module github.com/example/wechat-autopub
+module github.com/MichaelYgZhang/wechat-autopub
 
 go 1.20
 
