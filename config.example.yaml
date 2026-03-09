@@ -1,0 +1,40 @@
+server:
+  port: 8080
+  host: "0.0.0.0"
+
+db:
+  path: "data/wechat-autopub.db"
+
+wechat:
+  app_id: "${WECHAT_APP_ID}"
+  app_secret: "${WECHAT_APP_SECRET}"
+  default_author: "Auto Publisher"
+  default_thumb_media_id: ""  # 默认封面图 media_id，需提前上传
+
+openai:
+  api_key: "${OPENAI_API_KEY}"
+  base_url: ""  # 留空使用默认 OpenAI API，或填写自定义兼容端点
+  model: "gpt-4o"
+
+cron:
+  daily_publish: "0 8 * * *"   # 每天早上 8 点
+  status_check: "*/10 * * * *" # 每 10 分钟检查发布状态
+
+auth:
+  username: "admin"
+  password: "changeme"
+
+notify:
+  dingtalk:
+    enabled: false
+    webhook_url: ""
+    secret: ""
+  email:
+    enabled: false
+    host: "smtp.example.com"
+    port: 587
+    username: ""
+    password: ""
+    from: "noreply@example.com"
+    to:
+      - "admin@example.com"

@@ -1,0 +1,23 @@
+# Binaries
+/demo
+*.exe
+
+# Config with secrets
+config.yaml
+
+# Test files
+*.jpg
+*.png
+article.md
+article.docx
+
+# Data
+data/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# OS
+.DS_Store
